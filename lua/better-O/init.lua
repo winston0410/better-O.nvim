@@ -3,7 +3,7 @@ local opts = { enter_insert_mode = true }
 local function setup(user_opts)
 	opts = vim.tbl_extend('force', opts, user_opts or {})
     vim.api.nvim_set_keymap('n', 'O',
-                            ':lua require("better-O").insert_new_line()<CR>',
+                            '<cmd>lua require("better-O").insert_new_line()<CR>',
                             {silent = true, noremap = true})
 end
 
