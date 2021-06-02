@@ -22,5 +22,5 @@ This is the default configuration.
 Setting `enter_insert_mode` to `false` will make `O` end in normal mode.
 
 ```lua
-require('better-O').setup{ enter_insert_mode = true }
+require('better-O').setup{ enter_insert_mode = true, set_keybinding = true }
 ```
