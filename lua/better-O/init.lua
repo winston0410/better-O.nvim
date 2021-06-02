@@ -1,7 +1,10 @@
-local opts = { enter_insert_mode = true }
+local opts = { enter_insert_mode = true, set_keybinding = true }
 
 local function setup(user_opts)
 	opts = vim.tbl_extend('force', opts, user_opts or {})
+	if not opts.set_keybinding then
+		return
+	end
     vim.api.nvim_set_keymap('n', 'O',
                             '<cmd>lua require("better-O").insert_new_line()<CR>',
                             {silent = true, noremap = true})
